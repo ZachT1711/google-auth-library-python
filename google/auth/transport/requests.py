@@ -440,7 +440,7 @@ class AuthorizedSession(requests.Session):
             print("url:")
             print(url)
             print("headers:")
-            print(headers)
+            print(request_headers)
             print("data:")
             print(data)
             response = super(AuthorizedSession, self).request(
