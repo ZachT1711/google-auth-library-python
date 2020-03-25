@@ -434,6 +434,15 @@ class AuthorizedSession(requests.Session):
         remaining_time = guard.remaining_timeout
 
         with TimeoutGuard(remaining_time) as guard:
+            print("========= making http request ===============")
+            print("method:")
+            print(method)
+            print("url:")
+            print(url)
+            print("headers:")
+            print(headers)
+            print("data:")
+            print(data)
             response = super(AuthorizedSession, self).request(
                 method,
                 url,

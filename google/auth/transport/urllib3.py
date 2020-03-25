@@ -344,6 +344,15 @@ class AuthorizedHttp(urllib3.request.RequestMethods):
 
         self.credentials.before_request(self._request, method, url, request_headers)
 
+        print("========= making http request ===============")
+        print("method:")
+        print(method)
+        print("url:")
+        print(url)
+        print("headers:")
+        print(request_headers)
+        print("body:")
+        print(body)
         response = self.http.urlopen(
             method, url, body=body, headers=request_headers, **kwargs
         )
